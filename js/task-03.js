@@ -6,17 +6,17 @@ class Storage {
     this.items = items;
   }
   getItems() {
-    console.table(this.items);
+    return this.items;
   }
 
   addItem(item) {
-    storage.items.push(item);
+    this.items.push(item);
   }
 
   removeItem(item) { 
-    let itemIndex = storage.items.indexOf(item);
-    if (itemIndex != -1) {
-        storage.items.splice(itemIndex, 1);
+    let itemIndex = this.items.indexOf(item);
+    if (itemIndex !== -1) {
+        this.items.splice(itemIndex, 1);
     }
   }
 
